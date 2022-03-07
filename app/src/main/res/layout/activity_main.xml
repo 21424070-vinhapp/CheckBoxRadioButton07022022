@@ -59,6 +59,7 @@
         android:textColor="@color/white"/>
 
     <RadioGroup
+        android:id="@+id/group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -67,22 +68,22 @@
             android:id="@+id/radBiden"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Biden"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="Biden" />
 
         <RadioButton
             android:id="@+id/radPutin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Putin"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="Putin" />
 
         <RadioButton
             android:id="@+id/radKimJongUn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kim Jong Un"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="Kim Jong Un" />
     </RadioGroup>
 
     <Button

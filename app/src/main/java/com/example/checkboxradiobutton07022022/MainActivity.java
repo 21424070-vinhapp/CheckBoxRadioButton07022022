@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
  public class MainActivity extends AppCompatActivity {
@@ -57,17 +58,25 @@ import android.widget.TextView;
         mBtnBinhChon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mRadBiden.isChecked())
+//                if(mRadBiden.isChecked())
+//                {
+//                    mTxtQuyenLuc.setText(mRadBiden.getText());
+//                }
+//                else if(mRadPutin.isChecked())
+//                {
+//                    mTxtQuyenLuc.setText(mRadPutin.getText());
+//                }
+//                else if(mRadKimJongUn.isChecked())
+//                {
+//                    mTxtQuyenLuc.setText(mRadKimJongUn.getText());
+//                }
+                //Tim radioButton trong group radio duoc check
+                RadioGroup mGroup=findViewById(R.id.group);
+                int id=mGroup.getCheckedRadioButtonId();
+                if(id>0)
                 {
-                    mTxtQuyenLuc.setText(mRadBiden.getText());
-                }
-                else if(mRadPutin.isChecked())
-                {
-                    mTxtQuyenLuc.setText(mRadPutin.getText());
-                }
-                else if(mRadKimJongUn.isChecked())
-                {
-                    mTxtQuyenLuc.setText(mRadKimJongUn.getText());
+                    RadioButton radButton=findViewById(id);
+                    mTxtQuyenLuc.setText(radButton.getText());
                 }
             }
         });

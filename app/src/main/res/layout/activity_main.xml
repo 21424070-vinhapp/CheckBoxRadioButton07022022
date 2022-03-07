@@ -1,18 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txtXinMoi"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Moi ban nhap so thich"
+        android:textSize="30sp"
+        android:textColor="#E91E63"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <CheckBox
+        android:id="@+id/chkAndroid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android" />
+
+    <CheckBox
+        android:id="@+id/chkCSharp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C#" />
+
+    <CheckBox
+        android:id="@+id/chkSwift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Swift" />
+
+    <Button
+        android:id="@+id/btnXacNhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xac Nhan"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtSoThich"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="So Thich ban chon"
+        android:background="#8BC34A"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/txtBinhChon"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ban binh chon cho ai"
+        android:background="#E91E63"
+        android:textColor="@color/white"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radBiden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biden"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radPutin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Putin"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radKimJongUn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kim Jong Un"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnBinhChon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Binh chon"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtQuyenLuc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:hint="Nguoi quyen luc"
+        android:background="#673AB7"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+</LinearLayout>
